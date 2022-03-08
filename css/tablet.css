@@ -1,0 +1,23 @@
+/*
+=========================================================================
+|                                                                       |
+|   Stylesheet pour tablettes avec min-width: 768 et max-width: 991px   |
+|                                                                       |
+=========================================================================
+*/
+
+main{
+    flex-direction: column-reverse;
+}
+.populaires{
+    width: auto;
+    margin: 20px 0;
+}
+.populairesMarseille{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.cardHebergement{
+    width: 47%;
+}

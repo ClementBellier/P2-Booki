@@ -1,0 +1,118 @@
+/*
+====================================================
+|                                                  |
+|   Stylesheet pour mobile avec max-width: 767px   |
+|                                                  |
+====================================================
+*/
+
+.margeSansFooter{
+    width: 100%;
+}
+header{
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+header img{
+    margin-bottom: 10px;
+    width: 100px;
+}
+#desktop{
+    display: none;
+}
+#mobile{
+    display: initial;
+}
+header nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+header nav a{
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+header nav a{
+    border-bottom: solid #F2F2F2 5px;
+}
+.active, header nav a:hover{
+    color: #0065FC;
+    border-bottom: solid #0065FC 5px;
+    border-top: none;
+}
+.recherche{
+    width: 90%;
+    margin: auto;
+}
+.rechercheVille{
+    margin: auto;
+}
+.btnText{
+    display: none;
+}
+.btnIcon{
+    display: initial;
+    width: 50px;
+    border-radius: 15px;
+}
+.btnIcon:hover{
+    transform: scale(1.05);
+}
+.filtres p{
+    width: 100%;
+}
+.filtres button{
+    margin-right: 10px;
+}
+.cardHebergement{
+    width: 90%;
+    margin: auto;
+}
+main{
+    flex-direction: column-reverse;
+}
+.populaires{
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+.cardPopulaire{
+    width: 100%;
+}
+.cardPopulaire img{
+    width: 150px;
+}
+#hebergements{
+    background-color: white;
+}
+.cardHebergement{
+    margin-bottom: 15px;
+}
+.activitesMarseille{
+    flex-flow: column wrap;
+    align-content: center;
+    height: auto;
+}
+#activites h2{
+    margin-left: 20px;
+}
+#activites .cardActivite{ /*Pour avoir un selecteur supérieur à .cardActivite:nth-child(n) de style.css*/
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.cardActivite picture{
+    height: 75%;
+}
+footer{
+    flex-direction: column;
+}
+footer div{
+    width: 100%;
+}

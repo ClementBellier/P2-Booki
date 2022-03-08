@@ -1,0 +1,405 @@
+/*
+====================================================
+|                                                  |
+|    Stylesheet pour tous avec min-width: 992px    |
+|                                                  |
+====================================================
+*/
+
+/* Quelques resets */
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* 
+
+        Styles génériques
+        
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
+
+body{
+    font-family: 'Raleway';
+    font-size: 15px;
+}
+.margeSansFooter{ /* Met une marge sur la page entière sauf au footer */
+    width: 90%;
+    margin: auto;
+}
+h1{
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0;
+}
+i{
+    font-size: 18px;
+}
+
+/* Gestion des :hover */
+button:hover, .populaires h2 i:hover, .plus:hover, .cardHebergement:hover, .cardPopulaire:hover, .cardActivite:hover, footer li:hover{
+    cursor: pointer;
+}
+.populaires h2 a:hover, .plus:hover, footer a:hover, nav a:hover{
+    color: #0065FC;
+}
+.btnText:hover{
+    font-weight: 800;
+}
+nav a:hover{
+    border-top: solid #0065FC 5px;
+}
+
+
+/*
+
+        Styles pour le Header
+
+
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+header img{
+    width: 150px;
+}
+#mobile{
+    display: none;
+}
+nav{
+    height: 80px;
+    display: flex;
+}
+nav a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 40px;
+    text-align: center;
+}
+
+
+/*
+
+        Styles pour la section RECHERCHE
+
+
+*/
+.rechercheVille{
+    position: relative;
+    margin-top: 20px;
+    height: 50px;
+}
+.rechercheVille label{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+}
+.rechercheVille input{
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    left: 50px;
+    padding-left: 20px;
+    border: #F2F2F2 2px solid;
+}
+.rechercheVille input:focus-visible{
+    outline: none;
+    border: #0065FC 2px solid;
+}
+.rechercheVille input::placeholder{
+    font-weight: 800;
+    opacity: 1;
+}
+.rechercheVille button{
+    position: absolute;
+    left: 280px;
+    height: 50px;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+}
+.btnText{
+    width: 130px;
+    border-radius: 0 15px 15px 0;
+    font-weight: 600;
+}
+.btnIcon{
+    display: none;
+}
+
+/* Styles pour les Filtres */
+.filtres{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filtres p{
+    margin: 20px 30px 0 0;
+    font-weight: 800;
+}
+.filtres button{
+    background-color: transparent;
+    border: #F2F2F2 2px solid;
+    border-radius: 25px;
+    padding: 0 15px 0 0;
+    margin: 15px 25px 0 0;
+    font-weight: 800;
+    max-height: 50px;
+    transition: color 1s;
+    position: relative;
+}
+.filtres button:hover{
+    color: white;
+}
+.filtres i{
+    background-color: #deebff;
+    color: #0065FC;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: -2px 15px -2px -2px;
+}
+
+/*Animation des bouton filtres*/
+.animation{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0065FC;
+    border-radius: 25px;
+    height: 100%;
+    z-index: -1;
+    width: 45px;
+    transition: width 0.6s;
+}
+.filtres button:hover .animation{
+    width: 100%;
+}
+
+/* Pour le texte sous les filtres */
+#infoLogement{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+#infoLogement i{
+    font-size: 12px;
+    color: #0065FC;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    border: #deebff 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+#infoLogement p{
+    margin: 0;
+    line-height: 24px;
+}
+
+
+
+/*
+
+        Styles pour le Main
+
+
+*/
+
+/* Containers */
+main{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+#hebergements, .populaires{
+    background-color: #F2F2F2;
+    border-radius: 20px;    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#hebergements{
+    justify-content: space-between;
+}
+.hebergementsMarseille{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.populaires{
+    width: 30%;
+    min-width: 390px;  /* min-width de la card 350px + 20px de padding de chaque coté  */
+    margin-left: 2%;
+    justify-content: flex-start;
+}
+.populaires h2{
+    margin: 10px 0 20px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+#activites{
+    margin: 40px 0;
+}
+.activitesMarseille{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 450px;
+}
+
+/* Cards */
+.cardHebergement, .cardPopulaire, .cardActivite{    
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    background-color: white;
+}
+.cardHebergement, .cardPopulaire{
+    padding: 5px;
+}
+.cardHebergement:hover, .cardPopulaire:hover, .cardActivite:hover{
+    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    transform: scale(1.05);
+}
+
+/* Cards Partie Hebergements */
+.cardHebergement{
+    height: 200px;
+    min-width: 250px;
+    width: 31%;
+    margin: 10px 10px 10px 0;
+}
+@media (min-width: 1077px) and (max-width: 1371px){.cardHebergement{width: 47%;}}
+@media (min-width: 992px) and (max-width: 1077px){.cardHebergement{width: 90%;}.hebergementsMarseille{justify-content: center;}}
+.cardHebergement img{
+    height: 115px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 70%;
+    border-radius: 18px 18px 0 0;
+}
+.cardHebergementText{
+    padding: 0 7px;
+}
+.cardHebergement h3{
+    margin: 2px 0;
+    line-height: 15px;
+}
+.cardHebergement p{
+    margin: 5px 0 2px;
+}
+.cardHebergement i, .cardPopulaire i{
+    color: #0065FC;
+    font-size: 12px;
+}
+main .grey{ /* Pour les étoiles grises */
+    color: #F2F2F2;
+}
+
+/* Cards Partie Populaires */
+.cardPopulaire{
+    height: 150px;
+    width: 350px;
+    margin-bottom: 25px;
+    display: flex;
+}
+.cardPopulaire img{
+    width: 130px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px 0 0 18px;
+    margin-right: 5px;
+}
+.cardPopulaireText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+}
+.cardPopulaireText h3{
+    margin: 0;
+}
+.cardPopulaireText p{
+    margin: 0 0 40px;
+}
+
+/* Cards Partie Activités */
+.activitesMarseille{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.cardActivite{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+}
+.cardActivite h3{
+    padding-left: 20px;
+}
+.cardActivite picture{
+    height: 100%;
+    overflow: hidden;
+}
+.cardActivite img{
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Gérer les tailles différentes des cards Activités*/
+.cardActivite:nth-child(1){height: 100%;}
+.cardActivite:nth-child(2){height: 60%;}
+.cardActivite:nth-child(3){height: 35%;}
+.cardActivite:nth-child(4){height: 100%;}
+.cardActivite:nth-child(5){height: 40%;}
+.cardActivite:nth-child(6){height: 55%;}
+
+.cardActivite:nth-child(5) img{object-position: center top;} /* Pour bien voir Notre-Dame en haut de l'image*/
+
+/*
+
+        Styles pour le Footer
+
+
+*/
+
+footer{
+    background-color: #F2F2F2;
+    padding: 5%;
+    display: flex;
+}
+footer div{
+    width: 33%;
+}
+footer li{
+    margin-bottom: 15px;
+}
