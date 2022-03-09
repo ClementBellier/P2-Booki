@@ -257,6 +257,7 @@ main{
     min-width: 390px;  /* min-width de la card 350px + 20px de padding de chaque coté  */
     margin-left: 2%;
     justify-content: flex-start;
+    height: fit-content;
 }
 .populaires h2{
     margin: 10px 0 20px;
