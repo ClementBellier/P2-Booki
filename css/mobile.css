@@ -89,6 +89,9 @@ main{
 #hebergements{
     background-color: white;
 }
+#hebergements h2{
+    margin-bottom: 20px;
+}
 .cartesHebergement{
     margin-bottom: 15px;
 }

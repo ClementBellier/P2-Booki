@@ -252,6 +252,9 @@ main{
     justify-content: space-between;
     align-items: center;
 }
+#hebergements h2{
+    margin: 0;
+}
 .populaires{
     width: 30%;
     min-width: 390px;  /* min-width de la carte 350px + 20px de padding de chaque coté  */
