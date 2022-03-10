@@ -51,7 +51,7 @@ header nav a{
 .rechercheVille{
     margin: auto;
 }
-.btnText{
+.btnTexte{
     display: none;
 }
 .btnIcon{
@@ -68,7 +68,7 @@ header nav a{
 .filtres button{
     margin-right: 10px;
 }
-.cardHebergement{
+.cartesHebergement{
     width: 90%;
     margin: auto;
 }
@@ -80,16 +80,16 @@ main{
     margin: 0;
     border-radius: 0;
 }
-.cardPopulaire{
+.cartesPopulaire{
     width: 100%;
 }
-.cardPopulaire img{
+.cartesPopulaire img{
     width: 150px;
 }
 #hebergements{
     background-color: white;
 }
-.cardHebergement{
+.cartesHebergement{
     margin-bottom: 15px;
 }
 .activitesMarseille{
@@ -100,14 +100,14 @@ main{
 #activites h2{
     margin-left: 20px;
 }
-#activites .cardActivite{ /*Pour avoir un selecteur supérieur à .cardActivite:nth-child(n) de style.css*/
+#activites .cartesActivite{ /*Pour avoir un selecteur supérieur à .cartesActivite:nth-child(n) de style.css*/
     display: flex;
     flex-direction: column;
     width: 90%;
     height: 200px;
     margin-bottom: 20px;
 }
-.cardActivite picture{
+.cartesActivite picture{
     height: 75%;
 }
 footer{

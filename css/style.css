@@ -47,13 +47,13 @@ i{
 }
 
 /* Gestion des :hover */
-button:hover, .populaires h2 i:hover, .plus:hover, .cardHebergement:hover, .cardPopulaire:hover, .cardActivite:hover, footer li:hover{
+button:hover, .populaires h2 i:hover, .plus:hover, .cartesHebergement:hover, .cartesPopulaire:hover, .cartesActivite:hover, footer li:hover{
     cursor: pointer;
 }
 .populaires h2 a:hover, .plus:hover, footer a:hover, nav a:hover{
     color: #0065FC;
 }
-.btnText:hover{
+.btnTexte:hover{
     font-weight: 800;
 }
 nav a:hover{
@@ -138,7 +138,7 @@ nav a{
     color: white;
     border: none;
 }
-.btnText{
+.btnTexte{
     width: 130px;
     border-radius: 0 15px 15px 0;
     font-weight: 600;
@@ -254,7 +254,7 @@ main{
 }
 .populaires{
     width: 30%;
-    min-width: 390px;  /* min-width de la card 350px + 20px de padding de chaque coté  */
+    min-width: 390px;  /* min-width de la carte 350px + 20px de padding de chaque coté  */
     margin-left: 2%;
     justify-content: flex-start;
     height: fit-content;
@@ -276,47 +276,47 @@ main{
     height: 450px;
 }
 
-/* Cards */
-.cardHebergement, .cardPopulaire, .cardActivite{    
+/* Cartes */
+.cartesHebergement, .cartesPopulaire, .cartesActivite{    
     border-radius: 20px;
     box-shadow: 0 0 8px rgba(0,0,0,0.2);
     background-color: white;
 }
-.cardHebergement, .cardPopulaire{
+.cartesHebergement, .cartesPopulaire{
     padding: 5px;
 }
-.cardHebergement:hover, .cardPopulaire:hover, .cardActivite:hover{
+.cartesHebergement:hover, .cartesPopulaire:hover, .cartesActivite:hover{
     box-shadow: 0 0 16px rgba(0,0,0,0.5);
     transform: scale(1.05);
 }
 
-/* Cards Partie Hebergements */
-.cardHebergement{
+/* Cartes Partie Hebergements */
+.cartesHebergement{
     height: 200px;
     min-width: 250px;
     width: 31%;
     margin: 10px 10px 10px 0;
 }
-@media (min-width: 1077px) and (max-width: 1371px){.cardHebergement{width: 47%;}}
-@media (min-width: 992px) and (max-width: 1077px){.cardHebergement{width: 90%;}.hebergementsMarseille{justify-content: center;}}
-.cardHebergement img{
+@media (min-width: 1077px) and (max-width: 1371px){.cartesHebergement{width: 47%;}}
+@media (min-width: 992px) and (max-width: 1077px){.cartesHebergement{width: 90%;}.hebergementsMarseille{justify-content: center;}}
+.cartesHebergement img{
     height: 115px;
     width: 100%;
     object-fit: cover;
     object-position: 50% 70%;
     border-radius: 18px 18px 0 0;
 }
-.cardHebergementText{
+.cartesHebergementTexte{
     padding: 0 7px;
 }
-.cardHebergement h3{
+.cartesHebergement h3{
     margin: 2px 0;
     line-height: 15px;
 }
-.cardHebergement p{
+.cartesHebergement p{
     margin: 5px 0 2px;
 }
-.cardHebergement i, .cardPopulaire i{
+.cartesHebergement i, .cartesPopulaire i{
     color: #0065FC;
     font-size: 12px;
 }
@@ -324,67 +324,67 @@ main .grey{ /* Pour les étoiles grises */
     color: #F2F2F2;
 }
 
-/* Cards Partie Populaires */
-.cardPopulaire{
+/* Cartes Partie Populaires */
+.cartesPopulaire{
     height: 150px;
     width: 350px;
     margin-bottom: 25px;
     display: flex;
 }
-.cardPopulaire img{
+.cartesPopulaire img{
     width: 130px;
     height: 100%;
     object-fit: cover;
     border-radius: 18px 0 0 18px;
     margin-right: 5px;
 }
-.cardPopulaireText{
+.cartesPopulaireTexte{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 5px;
 }
-.cardPopulaireText h3{
+.cartesPopulaireTexte h3{
     margin: 0;
 }
-.cardPopulaireText p{
+.cartesPopulaireTexte p{
     margin: 0 0 40px;
 }
 
-/* Cards Partie Activités */
+/* Cartes Partie Activités */
 .activitesMarseille{
     height: 450px;
     display: flex;
     flex-direction: column;
 }
-.cardActivite{
+.cartesActivite{
     width: 23%;
     display: flex;
     flex-direction: column;
 }
-.cardActivite h3{
+.cartesActivite h3{
     padding-left: 20px;
 }
-.cardActivite picture{
+.cartesActivite picture{
     height: 100%;
     overflow: hidden;
 }
-.cardActivite img{
+.cartesActivite img{
     border-radius: 20px 20px 0 0;
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
 
-/* Gérer les tailles différentes des cards Activités*/
-.cardActivite:nth-child(1){height: 100%;}
-.cardActivite:nth-child(2){height: 60%;}
-.cardActivite:nth-child(3){height: 35%;}
-.cardActivite:nth-child(4){height: 100%;}
-.cardActivite:nth-child(5){height: 40%;}
-.cardActivite:nth-child(6){height: 55%;}
+/* Gérer les tailles différentes des cartes Activités*/
+.cartesActivite:nth-child(1){height: 100%;}
+.cartesActivite:nth-child(2){height: 60%;}
+.cartesActivite:nth-child(3){height: 35%;}
+.cartesActivite:nth-child(4){height: 100%;}
+.cartesActivite:nth-child(5){height: 40%;}
+.cartesActivite:nth-child(6){height: 55%;}
 
-.cardActivite:nth-child(5) img{object-position: center top;} /* Pour bien voir Notre-Dame en haut de l'image*/
+.cartesActivite:nth-child(5) img{object-position: center top;} /* Pour bien voir Notre-Dame en haut de l'image*/
 
 /*
 
