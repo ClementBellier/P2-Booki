@@ -244,7 +244,7 @@ main{
     flex-direction: column;
 }
 #hebergements{
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .hebergementsMarseille{
     display: flex;
