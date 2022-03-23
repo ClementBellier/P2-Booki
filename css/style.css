@@ -231,7 +231,7 @@ nav a{
 */
 
 /* Containers */
-main{
+.mainHaut{
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
@@ -296,12 +296,11 @@ main{
 /* Cartes Partie Hebergements */
 .cartesHebergement{
     height: 200px;
-    min-width: 250px;
     width: 31%;
     margin: 10px 10px 10px 0;
 }
-@media (min-width: 1077px) and (max-width: 1371px){.cartesHebergement{width: 47%;}}
-@media (min-width: 992px) and (max-width: 1077px){.cartesHebergement{width: 90%;}.hebergementsMarseille{justify-content: center;}}
+@media (min-width: 992px) and (max-width: 1300px){.cartesHebergement{font-size: 12px;}}
+
 .cartesHebergement img{
     height: 115px;
     width: 100%;

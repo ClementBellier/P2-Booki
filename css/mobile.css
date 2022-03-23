@@ -72,7 +72,7 @@ header nav a{
     width: 90%;
     margin: auto;
 }
-main{
+.mainHaut{
     flex-direction: column-reverse;
 }
 .populaires{
