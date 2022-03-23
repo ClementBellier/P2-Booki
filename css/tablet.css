@@ -6,7 +6,7 @@
 =========================================================================
 */
 
-main{
+.mainHaut{
     flex-direction: column-reverse;
 }
 .populaires{
